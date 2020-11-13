@@ -54,10 +54,6 @@ namespace ChallengesWithTestsMark8
             }
         }
 
-        public double SumOfMinAndMax(IEnumerable<double> numbers)
-        {
-            throw new NotImplementedException();
-        }
 
         public int GetLengthOfShortestString(string str1, string str2)
         { 
@@ -142,7 +138,33 @@ namespace ChallengesWithTestsMark8
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            if (number < 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return number / 2;
+            }
+
+        }
+        public double SumOfMinAndMax(IEnumerable<double> numbers)
+        {
+            if (numbers == null)
+            {
+                return 0;
+            }
+            if (numbers.Count() == 0)
+            {
+                return 0;
+            }
+            else
+            {
+            var min = numbers.Min();
+            var max = numbers.Max();
+            var sum = min + max;
+            return sum;
+            }
         }
     }
 }
